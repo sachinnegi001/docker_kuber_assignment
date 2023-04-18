@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sachin-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sachin-app
+  template:
+    metadata:
+      labels:
+        app: sachin-app
+    spec:
+      containers:
+      - name: sachin-app
+        image: sachinnegi001/docker-kubernetes
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8000
