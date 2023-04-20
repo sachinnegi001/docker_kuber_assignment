@@ -4,7 +4,7 @@ metadata:
   name: sachin-app-deployment
 spec:
   replicas: 2
-  selector:
+  selector:   
     matchLabels:
       app: sachin-app
   template:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sachin-app
-        image: sachinnegi001/docker-kubernetes
+        image: sachinnegi001/docker-kubernetes002
         resources:
           limits:
             memory: "256Mi"

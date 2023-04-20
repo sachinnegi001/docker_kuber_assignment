@@ -9,6 +9,6 @@ spec:
     app: sachin-app
   ports:
     - protocol: TCP
-      port: 8000
+      port: 80
       targetPort: 8000
       nodePort: 31516
